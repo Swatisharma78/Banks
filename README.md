@@ -12,14 +12,14 @@ A responsive web application for analyzing bank statements. It allows users to u
 
 ## Setup Instructions
 ### Prerequisites
-- Node.js (v16 or higher)
-- npm (v8 or higher)
+- Node.js (v22)
+- npm (v10)
 
 ### Steps to Run the Project
 1. **Clone the Repository**:
   
-   git clone https://github.com/your-username/bank-statement-analyzer.git
-   cd bank-statement-analyzer
+   git clone https://github.com/your-username/Banks.git
+   cd Banks
 
 
 
