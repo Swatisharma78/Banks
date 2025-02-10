@@ -1,0 +1,256 @@
+/* General Styles */
+body {overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app {
+  padding: 20px;
+  /* width: 100%; */
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .header {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .transaction-table,
+.dark-mode .summary,
+.dark-mode .chart-container {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .transaction-table th {
+  background-color: #333;
+}
+
+.dark-mode .transaction-table tr:hover {
+  background-color: #444;
+}
+
+.dark-mode .file-upload input {
+  background-color: #333;
+  color: #ffffff;
+  border-color: #0c0048;
+}
+
+.dark-mode .file-upload input:focus {
+  border-color: #3700b3;
+}
+
+.dark-mode .summary h2 {
+  color: #bb86fc; 
+}
+
+.dark-mode .mode-toggle {
+  background-color: #bb86fc; 
+  color: #121212; 
+}
+
+.dark-mode .mode-toggle:hover {
+  background-color: #3700b3;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0c0048;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.header nav a:hover {
+  opacity: 0.8;
+}
+
+/* Mode Toggle Button */
+.mode-toggle {
+  padding: 8px 16px;
+  background-color: #bb86fc;
+  color: #121212;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mode-toggle:hover {
+  background-color: #3700b3;
+}
+
+/* File Upload */
+.file-upload {
+  margin-bottom: 20px;
+}
+
+.file-upload input {
+  padding: 10px;
+  border: 2px solid #0c0048;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.file-upload input:focus {
+  border-color: #3700b3;
+}
+
+.file-upload .error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Transaction Table */
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.transaction-table th,
+.transaction-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.transaction-table th {
+  background-color: #0c0048;
+  color: white;
+}
+
+.transaction-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Summary */
+.summary {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.summary h2 {
+  margin-top: 0;
+  color: #0c0048;
+}
+
+.summary p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* Chart Container */
+.chart-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+  max-width: 600px; /* Limit maximum width */
+  margin: 0 auto; /* Center the chart */
+  height: 300px; /* Fixed height for better responsiveness */
+}
+
+/* Loading Animation */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header nav {
+    margin-top: 10px;
+  }
+
+  .transaction-table th,
+  .transaction-table td {
+    padding: 8px;
+  }
+
+  .summary p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header nav a {
+    font-size: 14px;
+  }
+
+  .file-upload input {
+    width: 100%;
+  }
+
+  .transaction-table th,
+  .transaction-table td {
+    font-size: 14px;
+  }
+}

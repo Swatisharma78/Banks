@@ -1,0 +1,11 @@
+{
+    "transactions": [
+      { "date": "2023-10-01", "description": "Salary", "amount": 5000, "type": "Income", "category": "Salary" },
+      { "date": "2023-10-02", "description": "Groceries", "amount": 200, "type": "Expense", "category": "Food" }
+    ],
+    "summary": {
+      "totalIncome": 5000,
+      "totalExpenses": 200,
+      "netBalance": 4800
+    }
+  }
